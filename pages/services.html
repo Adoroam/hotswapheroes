@@ -1,0 +1,113 @@
+<style type="text/css">
+#sdiv1 {	
+	height: 17em;
+	margin: 0em;
+	display: flex;
+}
+#sdivLeft {
+	flex:1;
+	display: flex;
+	flex-direction: column;
+}
+#sdivLeft a {
+	min-width: 18em;
+	font-size: .8em;
+	margin: .5em 0em;
+	padding-right: 1em;	
+	color: #2d87c6;
+	text-align: right;
+	cursor: default;
+	flex:1;	
+}
+#sdivLeft a:hover {
+	color:white;
+	background-color: #666;
+	border-radius: 1em;
+}
+#sdivRightOuter {
+	margin-left: 1em;	
+	padding: 1em;
+	background-color: #ddd;
+	flex:3;
+}
+#sdivRightInner {
+}
+#sdivRightInner  p {
+	font-size: .8em;
+}
+.servTitle {
+	color: #3296dc;
+	margin: 0em;
+}
+</style>
+
+<div id='sdiv1' >
+	<div id='sdivLeft'>		
+		<a ng-click="servSelect('webDesign')">Web Design & Hosting</a>
+		<a ng-click="servSelect('homeAudio')">Home Audio & Video Installation</a>
+		<a ng-click="servSelect('homeOffice')">Home Office Setup</a>
+		<a ng-click="servSelect('computerRepair')">Computer Repair & Maintenance</a>
+		<a ng-click="servSelect('networking')">Networking</a>
+		<a ng-click="servSelect('virusSpyware')">Virus/Spyware Protection & Removal</a>
+		<a ng-click="servSelect('smallBusiness')">Small Business Solutions</a>		
+		<a ng-click="servSelect('remoteAssistance')">Remote Assistance &Troubleshooting</a>
+		<a ng-click="servSelect('adviceConsult')">Advice & Consulting</a>
+	</div><!-- end sdivLeft -->
+
+	<div id='sdivRightOuter'>
+		<div id='sdivRightInner'>
+
+	<div ng-show="servShow('webDesign') ">
+		<h2 class="servTitle">Web Design & Hosting</h2>
+		<p>We work with you to tailor make and customize your website to fit your needs. We can help manage your domains and hosting to offer you a hassle free web presence. We make use of reseller hosting on popular hosting websites to make sure that your website is stable and efficient as well as maintaining our own servers to ensure that your website is always backed-up, safe, and available to your clients.</p> 
+		<p>Our web developers continually study and implement the most current web standards like HTML5 and CSS3 as well as server back-end languages like PHP and SQL. We also make use of powerful wesite management suites like Wordpress and Joomla to make sure that updating your websites with new information is intuitive and painless.</p>
+		<p>For specific inquiries please contact our <a href='mailto:Support@Hotswapheroes.com?Subject=Web%20Design' target='_blank'>Support</a>.</p>
+	</div>
+	<div ng-show="servShow('adviceConsult')">
+		<h2 class='servTitle'>Advice & Consulting</h2>
+		<p>Get top quality and up to date advice on what equipment and all the best deals in your area and consulting to figure out what you could or do need for your home or business.</p> 
+	</div>
+	<div ng-show="servShow('homeAudio')">
+		<h2 class='servTitle'>Entertainment System & Home Audio Installation</h2>
+		<p>If you’re having a little trouble setting up a new surround sound system or wall mounted TV, one of our qualified technicians will have it up in running in no time at all. We can set up entertainment systems and media centers to work with any existing or new hardware. Sometimes the best fix is just a $35 chromecast and an app on your smartphone. We are here to make your digital life easier</p>
+		<p>Maybe you want to play new AAA titles on your tv with a controller at 1080p and 60fps. We can help you build a budget gaming pc that will outperform any "next gen" console within the same price range. Contrary to popular belief, consoles pale in comparison to the power and versatility of a gaming pc.</p>
+		<p>Here at Hotswap Heroes, we want to bridge the gap between you and the technology that you use every day. We take pride in making sure you know how to use your new equipment before we leave and you can even call us back if you run into any trouble.</p>
+	</div>
+	<div ng-show="servShow('homeOffice')">
+		<h2 class='servTitle'>Home Office Setup</h2>
+		<p>Need help setting up that new wireless printer? We excel at finding the perfect solution for your home computing needs. This includes determining the best hardware and software to suit your particular workflow.</p> 
+		<p>When you purchase a computer don't let large reseller companies like Best Buy fill your brand new computer with bloatware or unreliable antivirus from whichever company paid them the most. We can help you make an informed decision and help you purchase and setup your new components. We want your new computer to run smoothly and feel like it should on the first day.</p>
+		<p>There are a plethora of options available to consumers in the way of optical character recognition now. Turn that pile of papers that you've had sitting on your desk into neatly organized and labled files with searchable text and batch editing. Take advantage of turning your home computer into a dedicated cloud server to keep your files secure on your own terms.</p> 
+	</div>
+	<div ng-show="servShow('networking')">
+		<h2 class='servTitle'>Networking</h2>
+		<p>Networks are capable of amazing things that people often overlook. A simple proxy server on your network can cache your traffic which increases the overall speed and efficiency of any multi-computer network. By saving a copy of all of your traffic on the proxy server, the other computers on the network benefit from downloading the same files at full network speed and are no longer limited by your download rate. That means updating 5 computers takes a fraction of the time.</p>
+
+		<p>Perhaps you have a large amount of sensitive documents. We can set up and teach you how to use your very own file server to distribute your files to your other computers or devices using varying degrees of encryption to make sure you can get to what you need from anywhere while keeping unwelcome visitors away.</p>
+
+		<p>Want to stream movies and music to your TV or speakers? We can help you find the best way to help you gain control of your playlists again. Whether it's a quick fix like a $35 chromecast or a personal media server to host your entire media collection for access on any device, anywhere, we will find the solution that works for you and your budget.</p>
+	</div>
+	<div ng-show="servShow('computerRepair')">
+		<h2 class='servTitle'>Computer Repair & Maintenance</h2>
+		<p>We’re very attentive and flexible in our computer repair. We can run a thorough diagnosis and will replace any faulty hardware up to the cost of diagnosis for no additional charge. We aren't here to nickle and dime you; We just want to get you back up and running so you have time for what matters most.</p>
+		<p>Many things can cause a computer to slow down. We can help speed up your computer by setting up an automated backup schedule, installing and configuring your software correctly, fixing driver issues, defragmenting your hard drives, and cleaning up your registery and temporary files. If you're unsatisfied with how your computer runs, we can help pinpoint the piece of hardware or software that's causing the bottleneck and advise you on what can be done to fix it.</p> 
+		<p>Often times routine maintenance can be the difference between a working computer and an expensive doorstop. Over time dust builds up in your ports and on the fans in your PC. We can schedule regular visits to physically detail your computer and leave it looking like new.</p>
+	</div>
+	<div ng-show="servShow('remoteAssistance')">
+		<h2 class='servTitle'>Remote Assistance & Troubleshooting</h2>
+		<p>Immediate assistance via one of our fine screen sharing providers. using this you can show us problems immediately and allows us to take your controls and directly assist in figuring out what the problem could be as soon as possible.</p> 
+	</div>
+	<div ng-show="servShow('smallBusiness')">
+		<h2 class='servTitle'>Small Business Solutions</h2>
+		<p>Let us find most efficient hardware and applications to get your company focused on the task at hand. We can help locate the closest suppliers and the cheapest rates for you to compare. We strive to find solutions that compliment any sized budget and workload.</p> 
+	</div>
+	<div ng-show="servShow('virusSpyware')">
+		<h2 class='servTitle'>Virus/Spyware Protection & Removal</h2>
+		<p>With so many different virus protection and removal softwares its hard to tell which one is best for you and which aren't viruses themselves. With virus and malware removal software, more is usually not better. Often times anti-virus software interferes with other anti-virus software and can lead to them canceling each other out. We help you decide which is best for your PC and help clear out the clutter.</p> 
+
+		<p>As well as keeping anti-virus software installed on your computer, you can also install these programs on other devices like external hard drives and flash drives. This makes it easier to deal with stubborn malware that prevents you from installing new software. In some cases, it may be beneficial to simply back up your important files and reformat the entire hard drive back to factory settings. Our office is equipped to quarantine the infected drives for recovery of important files. Although reinstalling your applications may be tedious, it's sometimes best to start from a clean slate.</p>
+	</div>
+
+		</div><!-- end sdivRightInner -->
+	</div><!-- end sdivRightOuter -->
+</div><!-- end sdiv1 -->
