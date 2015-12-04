@@ -43,15 +43,7 @@
 
 <div id='sdiv1' >
 	<div id='sdivLeft'>		
-		<a ng-click="servSelect('webDesign')">Web Design & Hosting</a>
-		<a ng-click="servSelect('homeAudio')">Home Audio & Video Installation</a>
-		<a ng-click="servSelect('homeOffice')">Home Office Setup</a>
-		<a ng-click="servSelect('computerRepair')">Computer Repair & Maintenance</a>
-		<a ng-click="servSelect('networking')">Networking</a>
-		<a ng-click="servSelect('virusSpyware')">Virus/Spyware Protection & Removal</a>
-		<a ng-click="servSelect('smallBusiness')">Small Business Solutions</a>		
-		<a ng-click="servSelect('remoteAssistance')">Remote Assistance &Troubleshooting</a>
-		<a ng-click="servSelect('adviceConsult')">Advice & Consulting</a>
+		<a  ng-repeat="y in servList" ng-click="servSelect('{{y.tag}}')">{{y.label}}</a>
 	</div><!-- end sdivLeft -->
 
 	<div id='sdivRightOuter'>

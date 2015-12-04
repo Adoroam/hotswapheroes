@@ -38,30 +38,15 @@ function menuCtrl($scope) {
 	$scope.servShow = function(x) {
 		return $scope.service == x; 
 	};
+	$scope.servList = [
+		{tag: "webDesign", label: "Web Design & Hosting"},
+		{tag: "homeAudio", label: "Home Audio & Video Installation"},
+		{tag: "homeOffice", label: "Home Office Setup"},
+		{tag: "computerRepair", label: "Computer Repair & Maintenance"},
+		{tag: "networking", label: "Networking"},
+		{tag: "virusSypware", label: "Virus/Spyware Protection & Removal"},
+		{tag: "smallBusiness", label: "Small Business Solutions"},
+		{tag: "remoteAssistance", label: "Remote Assistance"},
+		{tag: "adviceConsult", label: "Advice & Consulting"}
+	];
 }
-
-/*
-<div id="flexContainer">
-	<div class="column"><!--jquery-->
-		<h1>Jquery Testing</h1>
-		<button type="button" id="testButton1">this does nothing</button>
-	</div>
-	<div ng-controller='firstCtrl' class="column"><!--angularjs-->
-		<h1>Angular testing</h1>
-		<input type="text" ng-model='data.message' ng-click='clearng()'>
-		<p>Result: {{data.message}}</p>
-	</div>
-</div><!--flexContainer-->
-#flexContainer {
-	width: 100%;
-	margin: 0em;
-	padding: 0em 4em;
-	display: flex;
-	flex-flow:row nowrap;
-	box-sizing:border-box;
-}
-.column {
-	text-align: center; 
-	flex:1;
-}
-*/
