@@ -36,15 +36,15 @@ app.controller('menuCtrl', function ($scope) {
 		$scope.active = $scope.items[index].page;
 	};
 	$scope.servList = [
-		{tag: "webDesign", label: "Web Design & Hosting"},
-		{tag: "homeAudio", label: "Home Audio & Video Installation"},
-		{tag: "homeOffice", label: "Home Office Setup"},
-		{tag: "computerRepair", label: "Computer Repair & Maintenance"},
-		{tag: "networking", label: "Networking"},
-		{tag: "virusSpypware", label: "Virus/Spyware Protection & Removal"},
-		{tag: "smallBusiness", label: "Small Business Solutions"},
-		{tag: "remoteAssistance", label: "Remote Assistance"},
-		{tag: "adviceConsult", label: "Advice & Consulting"}
+		{tag: "webDesign", title: "Web Design & Hosting"},
+		{tag: "homeAudio", title: "Home Audio & Video Installation"},
+		{tag: "homeOffice", title: "Home Office Setup"},
+		{tag: "computerRepair", title: "Computer Repair & Maintenance"},
+		{tag: "networking", title: "Networking"},
+		{tag: "virusSpyware", title: "Virus/Spyware Protection & Removal"},
+		{tag: "smallBusiness", title: "Small Business Solutions"},
+		{tag: "remoteAssistance", title: "Remote Assistance"},
+		{tag: "adviceConsult", title: "Advice & Consulting"}
 	];
 	$scope.service =  $scope.servList[0].tag;
 	$scope.servSelect = function(index) {
@@ -53,5 +53,11 @@ app.controller('menuCtrl', function ($scope) {
 	};
 	$scope.servShow = function(x) {
 		return $scope.service == x; 
+	};
+	$scope.serv = false;
+	$scope.servActive = function() {
+		if ($scope.serv == false) {
+			$scope.serv = true;
+		}	else { $scope.serv = false; }
 	};
 });
