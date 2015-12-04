@@ -18,8 +18,7 @@ app.filter('filterName', function(outsideData){
 		return thingToBeFiltered//stuff to do to filtered object
 	}
 })
-
-function menuCtrl($scope) {
+app.controller('menuCtrl', function ($scope) {
 	$scope.items = [
 		{title:"Home", page:"pages/home.html"},
 		{title:"Services", page:"pages/services.html"},
@@ -49,4 +48,4 @@ function menuCtrl($scope) {
 		{tag: "remoteAssistance", label: "Remote Assistance"},
 		{tag: "adviceConsult", label: "Advice & Consulting"}
 	];
-}
+});
