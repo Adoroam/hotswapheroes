@@ -113,7 +113,11 @@ figcaption {
 .headingWrapper {
 	padding: 0;
 }
-.homeHeading {
+.homeHeading-xs {
+	font-size: 1em;
+	margin:  1em 0;
+}
+.homeHeading-other {
 	font-size: 2em;
 	margin:  1em 0;
 }
@@ -183,4 +187,13 @@ figcaption {
 }
 .servTitle {
 	text-align: center;
+}
+.contactWrapper {
+	vertical-align: middle;
+}
+.contact {
+	width: 100%;
+	border: .3em solid #666;
+	border-radius: 100%;
+	margin: 2em 0;
 }
