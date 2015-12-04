@@ -43,7 +43,7 @@
 
 <div id='sdiv1' >
 	<div id='sdivLeft'>		
-		<a  ng-repeat="y in servList" ng-click="servSelect('{{y.tag}}')">{{y.label}}</a>
+		<a  ng-repeat="y in servList" ng-click="servSelect($index)">{{y.label}}</a>
 	</div><!-- end sdivLeft -->
 
 	<div id='sdivRightOuter'>

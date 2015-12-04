@@ -5,12 +5,11 @@
 	<title>HotswapHeroes.com</title>
 	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="libs/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 	<script src="libs/jquery-2.0.3.min.js"></script>
 	<script src="libs/app.js"></script>
 <head>
 <body ng-controller="menuCtrl as menu">
-<?php include_once("analyticstracking.php") ?>
 <header>
 	<img src="images/gMenu.png" height="25em" width="25em" id="gMenu"/>
 	<a href="/" id="title">HotswapHeroes.com</a>
@@ -42,7 +41,7 @@
 	</div>
 <!--COPYRIGHT-->
 	<div class="content">
-		<p id="copyright">© Copyright 2014 HotswapHeroes.com - All logos and trademarks are the properties of their respective owners.</p>
+		<p id="copyright">© Copyright 2015 HotswapHeroes.com - All logos and trademarks are the properties of their respective owners.</p>
 	</div>
 </div>
 

@@ -30,9 +30,9 @@ app.controller('menuCtrl', function ($scope) {
 		$scope.active = x;
 	};
 	$scope.service = "webDesign";
-	$scope.servSelect = function(x) {
+	$scope.servSelect = function(index) {
 		$scope.setPage("pages/services.html");	
-		$scope.service = x;
+		$scope.service = $scope.servList[index].tag;
 	};
 	$scope.servShow = function(x) {
 		return $scope.service == x; 
@@ -43,7 +43,7 @@ app.controller('menuCtrl', function ($scope) {
 		{tag: "homeOffice", label: "Home Office Setup"},
 		{tag: "computerRepair", label: "Computer Repair & Maintenance"},
 		{tag: "networking", label: "Networking"},
-		{tag: "virusSypware", label: "Virus/Spyware Protection & Removal"},
+		{tag: "virusSpypware", label: "Virus/Spyware Protection & Removal"},
 		{tag: "smallBusiness", label: "Small Business Solutions"},
 		{tag: "remoteAssistance", label: "Remote Assistance"},
 		{tag: "adviceConsult", label: "Advice & Consulting"}
