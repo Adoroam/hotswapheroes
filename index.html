@@ -13,13 +13,13 @@
 <body ng-app="app" ng-controller="menuCtrl as menu">
 <div class="headerProxy"></div>
 <header>
-    <img src="images/gMenu.png" height="25em" width="25em" class="hamburger"/>
+    <img src="images/gMenu.png" class="hamburger menuToggle" ng-class="{hamburgerActive: ham == true}" ng-click="hamActive();"/>
     <a href="" class="headerTxt">HotswapHeroes.com</a>
 </header>
    
 <!--menu-->
     <div class="menu">
-        <a class="menuItem" ng-repeat="x in items" ng-click="setPage(x.page)" ng-class="{menuActive: active == x.page}">{{x.title}}</a>
+        <a class="menuItem menuToggle" ng-repeat="x in items" ng-click="setPage($index); hamActive();" ng-class="{menuActive: active == x.page}">{{x.title}}</a>
     </div>
 </div>
 <!--MAIN CONTENT-->
@@ -27,15 +27,15 @@
     <div class="content" ng-include='active' id="mainContent"></div>
 <!-- CIRCLES -->
     <div class="content" id="lowerContent">
-        <figure ng-click="servSelect('webDesign')">
+        <figure ng-click="servSelect(0)">
             <img src="images/screen2.png" />
             <figcaption>Web Design & hosting</figcaption>
         </figure>
-        <figure ng-click="servSelect('computerRepair');">
+        <figure ng-click="servSelect(3);">
             <img src="images/wrenchgear2.png" />
             <figcaption>Computer Maintenance & Repair</figcaption>
         </figure>
-        <figure  ng-click="servSelect('smallBusiness')">
+        <figure  ng-click="servSelect(6)">
             <img src="images/lightbulb2.png" />
             <figcaption>Small Business Solutions</figcaption>
         </figure>
@@ -50,15 +50,8 @@
 <script>
 $(document).ready(function(){
     $(".menu").animate({width: 'toggle'}, 0);           //minimize menu
-    $(".hamburger").click(function(){               
-        $(this).toggleClass("hamburgerActive");      //toggle the menu's active state class
+    $(".menuToggle").click(function(){               
         $(".menu").animate({width: 'toggle'});      //toggle the menu's active state animation
-    });
-    $(".menuItem").click(function(){        
-        $(".menuItem").removeClass("menuCurrent");  //un-tags all menu items
-        $(this).addClass("menuCurrent");            //tags this item as selected & loads page   
-        $(".hamburger").toggleClass("hamburgerActive");      //toggles the menu button state
-        $(".menu").animate({width: 'toggle'}, "slow");  //closes the menu           
     });
 });
 </script>

@@ -19,23 +19,21 @@ app.filter('filterName', function(outsideData){
 	}
 })
 app.controller('menuCtrl', function ($scope) {
+	$scope.ham = false;
+	$scope.hamActive = function() {
+		if ($scope.ham == false) {
+			$scope.ham = true;
+		}	else { $scope.ham = false; }
+	};
 	$scope.items = [
 		{title:"Home", page:"pages/home.html"},
 		{title:"Services", page:"pages/services.html"},
 		{title:"About Us", page:"pages/about.html"},
 		{title:"Contact ", page:"pages/contact.html"}
 	];
-	$scope.active = "pages/home.html";
-	$scope.setPage = function(x) {
-		$scope.active = x;
-	};
-	$scope.service = "webDesign";
-	$scope.servSelect = function(index) {
-		$scope.setPage("pages/services.html");	
-		$scope.service = $scope.servList[index].tag;
-	};
-	$scope.servShow = function(x) {
-		return $scope.service == x; 
+	$scope.active = $scope.items[0].page;
+	$scope.setPage = function(index) {
+		$scope.active = $scope.items[index].page;
 	};
 	$scope.servList = [
 		{tag: "webDesign", label: "Web Design & Hosting"},
@@ -48,4 +46,12 @@ app.controller('menuCtrl', function ($scope) {
 		{tag: "remoteAssistance", label: "Remote Assistance"},
 		{tag: "adviceConsult", label: "Advice & Consulting"}
 	];
+	$scope.service =  $scope.servList[0].tag;
+	$scope.servSelect = function(index) {
+		$scope.active = $scope.items[1].page;	
+		$scope.service = $scope.servList[index].tag;
+	};
+	$scope.servShow = function(x) {
+		return $scope.service == x; 
+	};
 });
